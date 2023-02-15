@@ -41,9 +41,9 @@ function resultsToOutput() {
         const gramsResult = toGrams(searchInput.value);
         const ozResult = toOz(searchInput.value);
 
-        if(Number(searchInput.value)) {
+        if (Number(searchInput.value)) {
 
-          createTable(lbsResult, gramsResult, ozResult);
+            createTable(lbsResult, gramsResult, ozResult);
 
         } else {
             const errorSpan = document.createElement("span");
@@ -53,7 +53,6 @@ function resultsToOutput() {
             errorSpan.style.textAlign = "center";
         }
     })
-
 }
 
 function createTable(lb, grams, oz) {

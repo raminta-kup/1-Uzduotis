@@ -19,9 +19,6 @@ output.style.flexDirection = "column";
 output.style.gap = "20px";
 output.style.maxWidth = "80%";
 output.style.margin = "50px auto";
-output.style.alignItems = "center";
-
-
 
 function toLb(num) {
     return num * 2.2046;
@@ -55,8 +52,6 @@ function resultsToOutput() {
             errorSpan.style.color = "red";
             errorSpan.style.textAlign = "center";
         }
-
-
     })
 
 }
@@ -71,21 +66,19 @@ function createTable(lb, grams, oz) {
     const tdLb = document.createElement("td");
     const tdGrams = document.createElement("td");
     const tdOz = document.createElement("td");
-    resultTable.style.textAlign = "center"
 
+    resultTable.style.textAlign = "center"
     thLb.textContent = "Lbs";
     thGrams.textContent = "Grams";
     thOz.textContent = "Oz";
+    tdLb.textContent = lb;
+    tdGrams.textContent = grams;
+    tdOz.textContent = oz;
 
     output.append(resultTable);
     resultTable.append(trTitles, trResults);
     trTitles.append(thLb, thGrams, thOz);
     trResults.append(tdLb, tdGrams, tdOz);
-
-    tdLb.textContent = lb;
-    tdGrams.textContent = grams;
-    tdOz.textContent = oz;
 }
-// createTable()
 
 resultsToOutput();

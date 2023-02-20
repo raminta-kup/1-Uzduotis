@@ -64,6 +64,11 @@ form {
   }
 }
 
+#output {
+  max-width: 80%;
+  margin: 50px auto;
+}
+
 th {
   font-size: 32px;
   padding: 20px 0;
@@ -74,12 +79,25 @@ td {
   font-size: 26px;
   width: 25%;
   background-color: #f7f7f7;
+  padding: 16px 0;
 }
 
 table {
   border-collapse: collapse;
+  padding: 24px 0;
+  background-color: white;
+  text-align: center;
+  width: 100%;
 }
 
 tr:not(:last-child) {
   border-bottom: 1px solid black;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  padding: 16px 0;
+  display: block;
+  font-size: 20px;
 }

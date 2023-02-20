@@ -20,6 +20,12 @@ const thLb = document.createElement("th");
 const thGrams = document.createElement("th");
 const thOz = document.createElement("th");
 const errorSpan = document.createElement("span");
+errorSpan.classList.add("error-message");
+
+thLb.textContent = "Lbs";
+thGrams.textContent = "Grams";
+thOz.textContent = "Oz";
+thKg.textContent = "Kg";
 
 output.prepend(errorSpan);
 output.append(resultTable);
@@ -66,29 +72,9 @@ function insertTableData(lb, grams, oz) {
     tdLb.textContent = lb;
     tdGrams.textContent = grams;
     tdOz.textContent = oz;
-    tdGrams.style.padding = "16px 0";
-    tdKg.style.padding = "16px 0";
-    tdOz.style.padding = "16px 0";
-    tdLb.style.padding = "16px 0";
 
     resultTable.append(trResults);
     trResults.append(tdKg, tdLb, tdGrams, tdOz);
 }
 
 resultsToOutput();
-
-output.style.maxWidth = "80%";
-output.style.margin = "50px auto";
-resultTable.style.padding = "24px 0";
-resultTable.style.backgroundColor = "white";
-resultTable.style.textAlign = "center";
-resultTable.style.width = "100%";
-thLb.textContent = "Lbs";
-thGrams.textContent = "Grams";
-thOz.textContent = "Oz";
-thKg.textContent = "Kg";
-errorSpan.style.color = "red";
-errorSpan.style.textAlign = "center";
-errorSpan.style.padding = "16px 0";
-errorSpan.style.display = "block";
-errorSpan.style.fontSize = "20px";

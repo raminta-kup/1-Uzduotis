@@ -65,8 +65,21 @@ form {
 }
 
 th {
-  font-size: 30px;
+  font-size: 32px;
+  padding: 20px 0;
+  width: 25%;
 }
+
 td {
-  font-size: 24px;
+  font-size: 26px;
+  width: 25%;
+  background-color: #f7f7f7;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr:not(:last-child) {
+  border-bottom: 1px solid black;
 }
